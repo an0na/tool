@@ -5,57 +5,11 @@
     <title>石仔阔以</title>
     <link rel="shortcut icon" href="https://s2.loli.net/2022/01/05/Gi1bj2J5cNfrX7A.png" type="image/x-icon" />
     <style>
-        @keyframes spin {
-            from{
-                transform: rotate(0deg);
-            }
-            to{
-                transform: rotate(360deg);
-            }
-        }
-        .taiChi{
-            background:#fff;
-            width:48px;
-            height:96px;
-            border-color:black;
-            border-style:solid;
-            border-width:2px 50px 2px 2px;
-            border-radius:100%;
-            position:relative;
-            animation-duration: 3s;
-            animation-name: spin;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            right: 60px;
-        }
-        .taiChi:before{
-            content:"";
-            position:absolute;
-            width:12px;
-            height:12px;
-            background: #000;
-            border:18px solid white;
-            top:0;
-            left:50%;
-            border-radius:100%;
-        }
-        .taiChi:after{
-            content:"";
-            position:absolute;
-            width:12px;
-            height:12px;
-            background:#fff;
-            border:18px solid black;
-            left:50%;
-            bottom:0;
-            border-radius:100%;
-        }
         a{
             font-size: 25px;
         }
         body{
             background-color: #CCCCA2;
-            /*background-image: url("https://s2.loli.net/2022/04/12/lDV8yNhqpTwa7ni.jpg");*/
         }
         label{
             color: red;
@@ -71,19 +25,6 @@
     </style>
 </head>
 <body>
-<div style="float: right">
-    <!--        <div style="float: top">-->
-    <!--            <div class="taiChi" style="float: right"></div>-->
-    <!--        </div>-->
-    <!--        <div style="float: bottom">-->
-    <!--            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=390 src="https://music.163.com/outchain/player?type=0&id=990647502&auto=1&height=390"></iframe>-->
-    <!--        </div>-->
-</div>
-
-<!--<div id="meirisici" style="margin-bottom: 30px; text-align: center; margin-top: 30px">-->
-<!--    <span id="currentDate" style="margin-bottom: 10px;font-size: 40px;font-weight: bold; color: #f87272; text-align: center"></span>-->
-<!--    <span id="jinrishici-sentence" style="font-size: 20px; font-family: 'Kaiti SC';font-style: italic">正在加载今日诗词....</span>-->
-<!--</div>-->
 
 <div class="main">
     <div class="mydiv">
@@ -100,7 +41,6 @@
         <a href="https://zxmee.com/" target="_blank">磁力精典</a>&nbsp;
         <a href="https://cupfox.app/" target="_blank">茶杯狐</a>&nbsp;
         <a href="https://www.novipnoad.com/" target="_blank">NO视频</a>&nbsp;
-<!--        <a href="https:/www.zhenbuka.fun" target="_blank">真不卡</a>&nbsp;-->
         <label>》</label>
     </div>
 
@@ -124,104 +64,9 @@
         <a href="http://139.129.228.249/" target="_blank">青龙</a>&nbsp;
         <a href="https://binaryify.github.io/vue-tetris/" target="_blank">俄罗斯方块</a>&nbsp;
         <a href="https://423down.lanzouo.com/b0f1944aj" target="_blank">TV APP</a>&nbsp;
-<!--        <a href="https://www.facebook.com/" target="_blank">Facebook</a>&nbsp;-->
-<!--        <a href="https://r2coding.com/#/" target="_blank">R2Coding</a>&nbsp;-->
         <label>》</label>
     </div>
 </div>
 
 </body>
-<!--<script type='text/javascript'>-->
-<!--    //获取当前时间-->
-<!--    setInterval(function () {-->
-<!--        let nowDateInfo = getDateString();-->
-<!--        document.getElementById("currentDate").innerHTML = nowDateInfo;-->
-<!--    }, 1000);-->
-
-<!--    function getBit(m, n) {-->
-<!--        return (m >> n) & 1;-->
-<!--    }-->
-
-<!--    function lunarDate(d) {-->
-<!--        let numString = "一二三四五六七八九十";-->
-<!--        let monString = "正二三四五六七八九十冬腊";-->
-<!--        let Cal = [0x41A95, 0xD4A, 0xDA5, 0x20B55, 0x56A, 0x7155B, 0x25D, 0x92D, 0x5192B, 0xA95, 0xB4A, 0x416AA, 0xAD5, 0x90AB5, 0x4BA, 0xA5B, 0x60A57, 0x52B, 0xA93, 0x40E95];-->
-<!--        let madd = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];-->
-
-<!--        let total, m, n, k;-->
-<!--        let isEnd = false;-->
-<!--        let tmp = d.getYear();-->
-<!--        if (tmp < 1900) tmp += 1900;-->
-<!--        total = (tmp - 2001) * 365 + Math.floor((tmp - 2001) / 4) + madd[d.getMonth()] + d.getDate() - 23;-->
-<!--        if (d.getYear() % 4 == 0 && d.getMonth() > 1) total++;-->
-
-<!--        for (m = 0;; m++) {-->
-<!--            k = (Cal[m] < 0xfff) ? 11 : 12;-->
-<!--            for (n = k; n >= 0; n&#45;&#45;) {-->
-<!--                if (total <= 29 + getBit(Cal[m], n)) {-->
-<!--                    isEnd = true;-->
-<!--                    break;-->
-<!--                }-->
-<!--                total = total - 29 - getBit(Cal[m], n);-->
-<!--            }-->
-<!--            if (isEnd) break;-->
-<!--        }-->
-
-<!--        let cYear = 2001 + m;-->
-<!--        let cMonth = k - n + 1;-->
-<!--        let cDay = total;-->
-<!--        if (k == 12) {-->
-<!--            if (cMonth == Math.floor(Cal[m] / 0x10000) + 1)-->
-<!--                cMonth = 1 - cMonth;-->
-<!--            if (cMonth > Math.floor(Cal[m] / 0x10000) + 1)-->
-<!--                cMonth&#45;&#45;;-->
-<!--        }-->
-<!--        let cHour = Math.floor((d.getHours() + 3) / 2);-->
-
-<!--        tmp = "";-->
-<!--        if (cMonth < 1) {-->
-<!--            tmp += "闰";-->
-<!--            tmp += monString.charAt(-cMonth - 1);-->
-<!--        } else {-->
-<!--            tmp += monString.charAt(cMonth - 1);-->
-<!--        }-->
-<!--        tmp += "月";-->
-<!--        tmp += (cDay < 11) ? "初" : ((cDay < 20) ? "十" : ((cDay < 30) ? "廿十" : "卅十"));-->
-<!--        if (cDay % 10 != 0 || cDay == 10)-->
-<!--            tmp += numString.charAt((cDay - 1) % 10);-->
-<!--        return tmp;-->
-<!--    }-->
-
-<!--    function getBigWeek(){-->
-<!--        //获取大小周-->
-<!--        let timestamp = Date.parse(new Date()) / 1000 - 1614528000;-->
-<!--        if(timestamp%1209600<=604800){-->
-<!--            return "[大周]"-->
-<!--        }else{-->
-<!--            return "[小周]"-->
-<!--        }-->
-<!--    }-->
-
-<!--    function getDateString() {-->
-<!--        let d = new Date();-->
-<!--        let ymd = d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日";-->
-<!--        let m = d.getMinutes();-->
-<!--        if (m < 10) {-->
-<!--            m = "0" + m;-->
-<!--        }-->
-<!--        let s = d.getSeconds();-->
-<!--        if (s < 10) {-->
-<!--            s = "0" + s;-->
-<!--        }-->
-<!--        let sfm = d.getHours() + ":" + m + ":" + s;-->
-<!--        let week = ['日', '一', '二', '三', '四', '五', '六'];-->
-<!--        let w = "星期" + week[d.getDay()];-->
-<!--        let l = lunarDate(d);-->
-<!--        // let l = "\"" + lunarDate(d) + "\"";-->
-<!--        let bigWeek = getBigWeek();-->
-<!--        // return ymd + " " + sfm + " " + w + " " + l + " " + bigWeek;-->
-<!--        return l;-->
-<!--    }-->
-<!--</script>-->
-<!--<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charSet="utf-8"></script>-->
 </html>
